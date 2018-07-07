@@ -1,4 +1,3 @@
-# BETA Project, not already to "use"
 # 1. Shoumen web application
 
 Shoumen web application is Java EE Web application that use a Gaikujin business transaction dependent project.
