@@ -23,3 +23,7 @@ Import all projects your eclipse and use maven install in gaikujin to generate a
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+
+## Jenkins
+
+I am using jenkins to build it :D ,,, XD
