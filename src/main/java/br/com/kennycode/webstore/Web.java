@@ -1,4 +1,4 @@
-package br.com.kennycode.webstore;
+/*package br.com.kennycode.webstore;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -14,9 +14,7 @@ import br.com.kennycode.gaikujin.model.Account;
 @WebServlet(urlPatterns="/timeline")
 public class Web extends HttpServlet {
 
-	/**
-	* 
-	*/
+	
 	private static final long serialVersionUID = -7549846059463730204L;
 	private String message;
 
@@ -45,3 +43,4 @@ public class Web extends HttpServlet {
 	}
 
 }
+*/
