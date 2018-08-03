@@ -7,13 +7,20 @@
 <title>Shoumen - homepage</title>
 </head>
 <body>
-	Hello world with Spring!!!
+
+
+	<a href="${pageContext.request.contextPath}/payment">Registry payment page</a> / 
+	<a href="${pageContext.request.contextPath}/payments">List of payments</a>
+	
+	<h1>Welcome to your home, :D</h1>
+
+<%-- 	Hello world with Spring!!!
 	<div>
 		<a name="toSignUp" href="${pageContext.request.contextPath}/auth/signup">Join us dude!!</a>
 	</div>
 	<div>
 		<a name="toSignIn" href="${pageContext.request.contextPath}/auth/signin">Get inside,
 			today is rainning!!!</a>
-	</div>
+	</div> --%>
 </body>
 </html>
