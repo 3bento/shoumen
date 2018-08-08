@@ -1,23 +1,20 @@
 package br.com.kennycode.shoumen.controller;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import br.com.kennycode.shoumen.dao.PaymentDAO;
 import br.com.kennycode.shoumen.model.Payment;
 
 @Controller
 public class PaymentController {
 
-	// FAKE LIST OF PAYMENTS (IT WILL COME FROM DATABASE) i don't have time XD, i am working to much :D>>>>>>
-	private static List<Payment> payments = new ArrayList<Payment>();;
+	private PaymentDAO dao;
 
 	public PaymentController() {
-
+		dao = new PaymentDAO();
 	}
 
 	/**
@@ -38,7 +35,7 @@ public class PaymentController {
 	 */
 	@RequestMapping(value = "payment", method = RequestMethod.POST)
 	public String payment(Payment payment) {
-		payments.add(payment);
+		dao.save(payment);
 		return "redirect:payments";
 	}
 
@@ -50,8 +47,19 @@ public class PaymentController {
 	 */
 	@RequestMapping(value = "payments", method = RequestMethod.GET)
 	public String payments(Model model) {
-		model.addAttribute("payments", payments);
+		model.addAttribute("payments", dao.payments());
 		return "payment/payments";
 	}
 
+	@RequestMapping("pay")
+	public String pay(Payment payment) {
+		dao.pay(payment);
+		return "redirect:payments";
+	}
+	
+	@RequestMapping("remove")
+	public String remove(Payment payment) {
+		dao.remove(payment);
+		return "redirect:payments";
+	}
 }

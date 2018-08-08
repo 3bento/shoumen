@@ -1,20 +1,25 @@
 package br.com.kennycode.shoumen.model;
 
+import java.util.Calendar;
+import java.util.UUID;
+
 public class Payment {
 
+	private UUID uuid;
 	private Long id;
 	private String description;
 	private double value;
+	private Calendar created;
+	private Calendar updated;
+	private boolean pay;
+	private Calendar paymentDate;
 
-	public Payment() {
-		// TODO Auto-generated constructor stub
+	public UUID getUuid() {
+		return uuid;
 	}
 
-	public Payment(Long id, String description, double value) {
-		super();
-		this.id = id;
-		this.description = description;
-		this.value = value;
+	public void setUuid(UUID uuid) {
+		this.uuid = uuid;
 	}
 
 	public Long getId() {
@@ -41,4 +46,35 @@ public class Payment {
 		this.description = description;
 	}
 
+	public Calendar getCreated() {
+		return created;
+	}
+
+	public void setCreated(Calendar created) {
+		this.created = created;
+	}
+
+	public Calendar getUpdated() {
+		return updated;
+	}
+
+	public void setUpdated(Calendar updated) {
+		this.updated = updated;
+	}
+
+	public void setPay(boolean pay) {
+		this.pay = pay;
+	}
+
+	public boolean isPay() {
+		return pay;
+	}
+
+	public Calendar getPaymentDate() {
+		return paymentDate;
+	}
+
+	public void setPaymentDate(Calendar paymentDate) {
+		this.paymentDate = paymentDate;
+	}
 }
