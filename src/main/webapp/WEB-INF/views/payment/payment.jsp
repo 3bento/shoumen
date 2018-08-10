@@ -6,11 +6,11 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Payment</title>
+<script src="resources/js/jquery.min.js"></script>
 </head>
 <body>
 	<a href="${pageContext.request.contextPath}/">Main page</a> / 
 	<a href="${pageContext.request.contextPath}/">List of payments</a>
-	
 	<form action="${pageContext.request.contextPath}/payment" method="post">
 		Description: <input value="" type="text" name="description" /></br> Value:
 		<input value="" type="text" name="value" /></br> <input type="submit"

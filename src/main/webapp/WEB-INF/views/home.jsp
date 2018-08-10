@@ -5,13 +5,12 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Shoumen - homepage</title>
+<script src="resources/js/jquery.min.js"></script>
 </head>
 <body>
-
-
-	<a href="${pageContext.request.contextPath}/payment">Registry payment page</a> / 
+	<a href="${pageContext.request.contextPath}/payment">Registry payment page</a>
 	<a href="${pageContext.request.contextPath}/payments">List of payments</a>
-	
+
 	<h1>Welcome to your home, :D</h1>
 
 <%-- 	Hello world with Spring!!!

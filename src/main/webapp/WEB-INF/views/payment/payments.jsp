@@ -7,6 +7,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Payments</title>
+<script src="resources/js/jquery.min.js"></script>
 </head>
 <body>
 	<a href="${pageContext.request.contextPath}/">Main page</a> /
