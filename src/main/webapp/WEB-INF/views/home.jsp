@@ -8,8 +8,8 @@
 <script src="resources/js/jquery.min.js"></script>
 </head>
 <body>
-	<a href="${pageContext.request.contextPath}/payment">Registry payment page</a>
-	<a href="${pageContext.request.contextPath}/payments">List of payments</a>
+	<a href="${pageContext.request.contextPath}/auth/signin">Login</a><br>
+	<a href="${pageContext.request.contextPath}/auth/signup">Registry</a>
 
 	<h1>Welcome to your home, :D</h1>
 

@@ -1,57 +1,77 @@
 package br.com.kennycode.shoumen.model;
 
 import java.util.Calendar;
+import java.util.UUID;
 
 public class Account {
 
-	private Long id;
-	private String description;
-	private  boolean isPaid;
-	private double value;
-	private Calendar datePayment;
-	private TypeOfAccount type;
+	private UUID uuid;
+	private String username;
+	private String password;
+	private Calendar created;
+	private Calendar updated;
 
-	public Long getId() {
-		return id;
+	public UUID getUuid() {
+		return uuid;
 	}
-	public void setId(Long id) {
-		this.id = id;
+
+	public void setUuid(UUID uuid) {
+		this.uuid = uuid;
 	}
-	public String getDescription() {
-		return description;
+
+	public String getUsername() {
+		return username;
 	}
-	public void setDescription(String description) {
-		this.description = description;
+
+	public void setUsername(String username) {
+		this.username = username;
 	}
-	public boolean isPaid() {
-		return isPaid;
+
+	public String getPassword() {
+		return password;
 	}
-	public void setPaid(boolean isPaid) {
-		this.isPaid = isPaid;
+
+	public void setPassword(String password) {
+		this.password = password;
 	}
-	public double getValue() {
-		return value;
+
+	public Calendar getCreated() {
+		return created;
 	}
-	public void setValue(double value) {
-		this.value = value;
+
+	public void setCreated(Calendar created) {
+		this.created = created;
 	}
-	public Calendar getDatePayment() {
-		return datePayment;
+
+	public Calendar getUpdated() {
+		return updated;
 	}
-	public void setDatePayment(Calendar datePayment) {
-		this.datePayment = datePayment;
+
+	public void setUpdated(Calendar updated) {
+		this.updated = updated;
 	}
-	public TypeOfAccount getType() {
-		return type;
+
+	public boolean isExist(Account account) {
+		if(getUuid() == null || account.getUuid() == null)
+			return false;
+		if(getUuid().equals(account.getUuid()))
+			return false;
+		return true;
 	}
-	public void setType(TypeOfAccount type) {
-		this.type = type;
+
+	public boolean isUsernameEqual(Account account) {
+		if(getUsername().equals(account.getUsername()))
+			return true;
+		return false;
 	}
+
 	@Override
 	public String toString() {
-		return "Account [id=" + id + ", description=" + description + ", isPaid=" + isPaid + ", value=" + value
-				+ ", datePayment=" + datePayment.getTime() + ", type=" + type + "]";
+		return "Account [uuid=" + uuid + ", username=" + username + ", password=" + password + ", created=" + created
+				+ ", updated=" + updated + "]";
 	}
+	
+	
 	
 	
 }

@@ -13,6 +13,7 @@
 	<a href="${pageContext.request.contextPath}/">Main page</a> /
 	<a href="${pageContext.request.contextPath}/payment">Registry
 		payment page</a>
+	<a href="${pageContext.request.contextPath}/auth/logout">Logout</a>
 	<table>
 		<tr>
 			<th>Description</th>

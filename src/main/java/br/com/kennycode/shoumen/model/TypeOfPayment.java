@@ -1,6 +1,6 @@
 package br.com.kennycode.shoumen.model;
 
-public enum TypeOfAccount {
+public enum TypeOfPayment {
 	INFLOW,
 	OUTFLOW
 }

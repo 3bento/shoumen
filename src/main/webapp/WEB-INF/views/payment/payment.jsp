@@ -9,8 +9,8 @@
 <script src="resources/js/jquery.min.js"></script>
 </head>
 <body>
-	<a href="${pageContext.request.contextPath}/">Main page</a> / 
-	<a href="${pageContext.request.contextPath}/">List of payments</a>
+	<a href="${pageContext.request.contextPath}/payments">List of payments</a>
+		<a href="${pageContext.request.contextPath}/auth/logout">Logout</a>
 	<form action="${pageContext.request.contextPath}/payment" method="post">
 		Description: <input value="" type="text" name="description" /></br> Value:
 		<input value="" type="text" name="value" /></br> <input type="submit"
