@@ -1,8 +1,10 @@
 package br.com.kennycode.shoumen.controller.auth;
 
 import javax.servlet.http.HttpSession;
+import javax.validation.Valid;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -27,10 +29,14 @@ public class AccountController {
 	}
 
 	@RequestMapping(value = "signup", method = RequestMethod.POST)
-	public String save(Account account) {
+	public String save(@Valid Account account, BindingResult result) {
+		
+		if(result.hasErrors())
+			return "auth/signup";
+
 		account = accountDAO.save(account);
 		System.out.println(account);
-		// System.out.println(accountDAO.getAll());
+
 		if (account.getUuid() != null)
 			return "redirect:signin";
 		return "redirect:signup";
@@ -42,7 +48,11 @@ public class AccountController {
 	}
 
 	@RequestMapping(value = "signin", method = RequestMethod.POST)
-	public String login(Account account, HttpSession session) {
+	public String login(@Valid Account account, HttpSession session, BindingResult result) {
+
+		if(result.hasErrors())
+			return "auth/signin";
+		
 		if (authentication.canLogin(account)) {
 			session.setAttribute("account", account);
 			return "redirect:/payments";

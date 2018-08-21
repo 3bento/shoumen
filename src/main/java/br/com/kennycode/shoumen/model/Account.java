@@ -3,10 +3,17 @@ package br.com.kennycode.shoumen.model;
 import java.util.Calendar;
 import java.util.UUID;
 
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.Size;
+
 public class Account {
 
 	private UUID uuid;
+	@NotEmpty
+	@Size(min=4, max=12)
 	private String username;
+	@NotEmpty
+	@Size(min=4, max=64)
 	private String password;
 	private Calendar created;
 	private Calendar updated;
@@ -19,6 +26,7 @@ public class Account {
 		this.uuid = uuid;
 	}
 
+	
 	public String getUsername() {
 		return username;
 	}
