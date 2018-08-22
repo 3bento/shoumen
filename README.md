@@ -17,7 +17,8 @@ The users can create accounts and registry some payments.
 * [Shoumen web application](https://github.com/eduardobento2/shoumen) - clone it
 
 ## Versioning
-0.5.7 version
+
+* [0.5.7 version](https://github.com/eduardobento2/shoumen/releases/tag/v0.5.7)
  
 ## Authors
 
