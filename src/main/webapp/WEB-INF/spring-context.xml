@@ -16,13 +16,23 @@ http://www.springframework.org/schema/context/spring-context-3.0.xsd">
 	<mvc:default-servlet-handler />
 
 	<mvc:interceptors>
-		<bean class="br.com.kennycode.shoumen.controller.auth.AuthorizationInterceptor"></bean>
+		<bean
+			class="br.com.kennycode.shoumen.controller.auth.AuthorizationInterceptor"></bean>
 	</mvc:interceptors>
 
 	<bean
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<property name="prefix" value="/WEB-INF/views/" />
 		<property name="suffix" value=".jsp" />
+	</bean>
+
+	<bean id="mysqlDataSource"
+		class="org.apache.commons.dbcp.BasicDataSource">
+		<property name="driverClassName"
+			value="org.hsqldb.jdbcDriver" />
+		<property name="url" value="jdbc:hsqldb:file:shoumen.db" />
+		<property name="username" value="sa" />
+		<property name="password" value="" />
 	</bean>
 
 	<bean id="conversionService"

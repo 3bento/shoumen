@@ -1,16 +1,33 @@
 package br.com.kennycode.shoumen.dao;
 
+import java.sql.Connection;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 import java.util.UUID;
 
+import javax.sql.DataSource;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+
 import br.com.kennycode.shoumen.model.Account;
 
+@Repository
 public class AccountDAO implements BaseDAO<Account> {
 
 	private static List<Account> accounts;
+	private Connection connection;
 
+	@Autowired
+	public AccountDAO(DataSource ds) {
+		try {
+			this.connection = ds.getConnection();
+		} catch(Exception e) {
+			throw new RuntimeException(e);
+		}
+	}
+	
 	public AccountDAO() {
 		accounts = new ArrayList<Account>();
 	}

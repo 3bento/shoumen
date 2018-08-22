@@ -3,6 +3,7 @@ package br.com.kennycode.shoumen.controller.auth;
 import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -19,6 +20,11 @@ public class AccountController {
 	private AccountDAO accountDAO = new AccountDAO();
 	private AuthenticationService authentication = new AuthenticationService();
 
+	@Autowired
+	public AccountController(AccountDAO accountDAO) {
+		this.accountDAO = accountDAO;
+	}
+	
 	public AccountController() {
 		accountDAO = new AccountDAO();
 	}
