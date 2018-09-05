@@ -18,17 +18,14 @@ import br.com.kennycode.shoumen.service.AuthenticationService;
 public class AccountController {
 
 	private AccountDAO accountDAO = new AccountDAO();
-	private AuthenticationService authentication = new AuthenticationService();
+	private AuthenticationService authentication;
 
 	@Autowired
 	public AccountController(AccountDAO accountDAO) {
+		this.authentication = new AuthenticationService(accountDAO);
 		this.accountDAO = accountDAO;
 	}
 	
-	public AccountController() {
-		accountDAO = new AccountDAO();
-	}
-
 	@RequestMapping(value = "signup", method = RequestMethod.GET)
 	public String signup() {
 		return "auth/signup";
@@ -58,11 +55,12 @@ public class AccountController {
 
 		if(result.hasErrors())
 			return "auth/signin";
-		
+
 		if (authentication.canLogin(account)) {
 			session.setAttribute("account", account);
 			return "redirect:/payments";
 		}
+
 		return "redirect:signin";
 	}
 

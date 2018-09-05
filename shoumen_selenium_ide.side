@@ -1,0 +1,288 @@
+{
+  "id": "9d99bbb1-cde7-4599-bc9a-ea703361fbf4",
+  "version": "1.1",
+  "name": "shoumen_selenium_ide",
+  "url": "http://localhost:8080/shoumen/",
+  "tests": [{
+    "id": "08ebab07-2488-4cda-a221-9fb3faa804fd",
+    "name": "isHome",
+    "commands": [{
+      "id": "757f42cd-7f65-4067-82d1-383edf56ed86",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:8080/shoumen/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5f6673bd-89f6-411c-a161-2aa6879ba9c5",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "linkText=Login",
+      "targets": [
+        ["linkText=Login", "linkText"],
+        ["css=a", "css"],
+        ["//a[contains(text(),'Login')]", "xpath:link"],
+        ["//a[contains(@href, '/shoumen/auth/signin')]", "xpath:href"],
+        ["//a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "aca68631-f97f-41c0-9aaf-b9394c15bd09",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "linkText=Registry",
+      "targets": [
+        ["linkText=Registry", "linkText"],
+        ["//a[contains(text(),'Registry')]", "xpath:link"],
+        ["//a[contains(@href, '/shoumen/auth/signup')]", "xpath:href"],
+        ["//a[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5344c644-23e0-4697-8564-5e9ebb3688b3",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=h1",
+      "targets": [
+        ["css=h1", "css"],
+        ["//h1", "xpath:position"]
+      ],
+      "value": "Welcome to your home, :D"
+    }, {
+      "id": "43587751-f95f-451a-9b0a-fc7683655a0e",
+      "comment": "",
+      "command": "assertTitle",
+      "target": "Shoumen - homepage",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "f8c891dc-ecff-4236-933e-0a305f8cb754",
+    "name": "goToLogin",
+    "commands": [{
+      "id": "b0a8a063-1105-4213-8fa0-54ff86431a39",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:8080/shoumen/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9c6a13e3-bbe7-4564-8fca-1ba03df31d3a",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "linkText=Login",
+      "targets": [
+        ["linkText=Login", "linkText"],
+        ["css=a", "css"],
+        ["//a[contains(text(),'Login')]", "xpath:link"],
+        ["//a[contains(@href, '/shoumen/auth/signin')]", "xpath:href"],
+        ["//a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e0fcedc3-4f7f-408f-90ed-58055d774313",
+      "comment": "",
+      "command": "clickAt",
+      "target": "linkText=Login",
+      "targets": [
+        ["linkText=Login", "linkText"],
+        ["css=a", "css"],
+        ["//a[contains(text(),'Login')]", "xpath:link"],
+        ["//a[contains(@href, '/shoumen/auth/signin')]", "xpath:href"],
+        ["//a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "89d1355f-a3c8-4a69-9a31-e0e19561b901",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=h3",
+      "targets": [
+        ["css=h3", "css"],
+        ["//h3", "xpath:position"]
+      ],
+      "value": "Sign in - Get inside because that is rainning!!!"
+    }]
+  }, {
+    "id": "f4343cda-f72a-4b50-ba60-2ecca4ae5a77",
+    "name": "goToRegistryAccount",
+    "commands": [{
+      "id": "dd201a08-7d00-4eb4-bb7a-cc61eb1a4ae5",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:8080/shoumen/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2a6831b4-9a58-42f0-ae94-a49030d23e37",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "linkText=Registry",
+      "targets": [
+        ["linkText=Registry", "linkText"],
+        ["//a[contains(text(),'Registry')]", "xpath:link"],
+        ["//a[contains(@href, '/shoumen/auth/signup')]", "xpath:href"],
+        ["//a[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "77e082b1-6acf-4fb5-a3e8-e8a5c14b06c7",
+      "comment": "",
+      "command": "clickAt",
+      "target": "linkText=Registry",
+      "targets": [
+        ["linkText=Registry", "linkText"],
+        ["//a[contains(text(),'Registry')]", "xpath:link"],
+        ["//a[contains(@href, '/shoumen/auth/signup')]", "xpath:href"],
+        ["//a[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "068faa18-b18d-4ab6-b9d0-1e081c1cc95b",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=h3",
+      "targets": [
+        ["css=h3", "css"],
+        ["//h3", "xpath:position"]
+      ],
+      "value": "New account only HERE!!!! You are user 1.000.000.000.000"
+    }]
+  }, {
+    "id": "fb557206-a00e-430a-84a5-5beb25c43e71",
+    "name": "isRegistryAccount",
+    "commands": [{
+      "id": "4d7281ca-44d2-41f9-9066-da111a2e0676",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:8080/shoumen/auth/signup",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f9d05134-111d-457d-b645-50d5571388dc",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=h3",
+      "targets": [
+        ["css=h3", "css"],
+        ["//h3", "xpath:position"]
+      ],
+      "value": "New account only HERE!!!! You are user 1.000.000.000.000"
+    }]
+  }, {
+    "id": "95fb9838-74e2-4ecc-926c-8e4bc8d86c2b",
+    "name": "registryAccountSuccess",
+    "commands": [{
+      "id": "5e69f369-a1ef-49cd-959d-734bec035a46",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:8080/shoumen/auth/signup",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "34b6b6ba-b36e-4965-a94c-8cdcb0caf411",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=h3",
+      "targets": [
+        ["css=h3", "css"],
+        ["//h3", "xpath:position"]
+      ],
+      "value": "New account only HERE!!!! You are user 1.000.000.000.000"
+    }, {
+      "id": "d84650ea-832b-40b1-b771-ad1d1ea105f2",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "name=username",
+      "targets": [
+        ["name=username", "name"],
+        ["css=input[name=\"username\"]", "css"],
+        ["//input[@name='username']", "xpath:attributes"],
+        ["//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1cd47e8f-345e-4400-b87c-48408286c997",
+      "comment": "",
+      "command": "type",
+      "target": "name=username",
+      "targets": [
+        ["name=username", "name"],
+        ["css=input[name=\"username\"]", "css"],
+        ["//input[@name='username']", "xpath:attributes"],
+        ["//input", "xpath:position"]
+      ],
+      "value": "a123456789"
+    }, {
+      "id": "10c99285-6c93-426a-897a-f1c5e952a06f",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=input[name=\"password\"]", "css"],
+        ["//input[@name='password']", "xpath:attributes"],
+        ["//div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "cec80756-c9df-4055-9af9-96de759fbeaf",
+      "comment": "",
+      "command": "type",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=input[name=\"password\"]", "css"],
+        ["//input[@name='password']", "xpath:attributes"],
+        ["//div[2]/input", "xpath:position"]
+      ],
+      "value": "a123456789"
+    }, {
+      "id": "0c870fc2-c399-4661-8e98-704bbaed1f7b",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=input[type=\"submit\"]",
+      "targets": [
+        ["css=input[type=\"submit\"]", "css"],
+        ["//input[@value='Sign up']", "xpath:attributes"],
+        ["//div[3]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "dd3fb109-dd57-4884-b868-5023f122c890",
+      "comment": "",
+      "command": "clickAt",
+      "target": "css=input[type=\"submit\"]",
+      "targets": [
+        ["css=input[type=\"submit\"]", "css"],
+        ["//input[@value='Sign up']", "xpath:attributes"],
+        ["//div[3]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a7bf6f85-2723-4fd2-a1a6-704f6ace8b96",
+      "comment": "",
+      "command": "assertTitle",
+      "target": "Shoumen - signin",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "9bff8af0-1a99-43c5-be45-acca61a56c8b",
+    "name": "HomePage",
+    "persistSession": false,
+    "parallel": true,
+    "timeout": 300,
+    "tests": ["f8c891dc-ecff-4236-933e-0a305f8cb754", "08ebab07-2488-4cda-a221-9fb3faa804fd", "f4343cda-f72a-4b50-ba60-2ecca4ae5a77"]
+  }, {
+    "id": "c7e70ea6-a251-4d33-a9cf-1571c869b5b3",
+    "name": "RegistryPage",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["fb557206-a00e-430a-84a5-5beb25c43e71", "95fb9838-74e2-4ecc-926c-8e4bc8d86c2b"]
+  }],
+  "urls": ["http://localhost:8080/shoumen/"],
+  "plugins": []
+}

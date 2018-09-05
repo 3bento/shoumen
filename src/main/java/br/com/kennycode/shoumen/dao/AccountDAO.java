@@ -20,9 +20,9 @@ public class AccountDAO implements BaseDAO<Account> {
 	private Connection connection;
 
 	@Autowired
-	public AccountDAO(DataSource ds) {
+	public AccountDAO(DataSource dataSource) {
 		try {
-			this.connection = ds.getConnection();
+			this.connection = dataSource.getConnection();
 		} catch(Exception e) {
 			throw new RuntimeException(e);
 		}
